@@ -62,7 +62,7 @@ func NewPBKDF2Params() (*PBKDF2Params, error) {
 		Dklen: 32,
 		C:     262144,
 		Prf:   "hmac-sha256",
-		Salt:  nil,
+		Salt:  salt[:],
 	}, nil
 }
 

@@ -11,8 +11,8 @@ type Keystore struct {
 	Description string         `json:"description,omitempty"`
 	Pubkey      JsonBytes      `json:"pubkey,omitempty"`
 	// Path used in HD derivation.
-	// EIP-2335 marks this as required field, but it may not exist, thus optional here.
-	Path    string    `json:"path,omitempty"`
+	// EIP-2335 marks this as required field, but it may not exist, thus sometimes empty here.
+	Path    string    `json:"path"`
 	UUID    uuid.UUID `json:"uuid"`
 	Version uint      `json:"version"`
 }
